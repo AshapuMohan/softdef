@@ -1,0 +1,404 @@
+[
+  {
+    "id": 1,
+    "name": "ADIDAS MEN'S OWN THE GAME 3.0",
+    "brand": "Adidas",
+    "price": 6599,
+    "discountPrice": 7786,
+    "discountPercent": 18,
+    "ratingValue": 4.8,
+    "ratingCount": 1118,
+    "isHot": false,
+    "colors": [
+      "CLOUD WHITE",
+      "CORE BLACK"
+    ],
+    "category": "running",
+    "imageUrl": "/images/adidas-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "UA CURRY 1 LOW FLOTRO LUX ",
+    "brand": "Under Armour",
+    "price": 8999,
+    "discountPrice": 14999,
+    "discountPercent": 40,
+    "ratingValue": 4.2,
+    "ratingCount": 1170,
+    "isHot": false,
+    "colors": [
+      "HALO GREY"
+    ],
+    "category": "running",
+    "imageUrl": "/images/ua-1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "NIKE LEBRON NXXT GEN AMPD EP ",
+    "brand": "Nike",
+    "price": 10497,
+    "discountPrice": 14995,
+    "discountPercent": 30,
+    "ratingValue": 4.3,
+    "ratingCount": 777,
+    "isHot": true,
+    "colors": [
+      "NAVY BLUE"
+    ],
+    "category": "casual",
+    "imageUrl": "/images/nike-1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "NIKE G.T. HUSTLE ACADEMY EP BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 6796,
+    "discountPrice": 8495,
+    "discountPercent": 20,
+    "ratingValue": 4.6,
+    "ratingCount": 1163,
+    "isHot": false,
+    "colors": [
+      "VINTAGE GREEN",
+      "JADE HORIZON",
+      "SAIL"
+    ],
+    "category": "casual",
+    "imageUrl": "/images/nike-2.jpg"
+  },
+  {
+    "id": 5,
+    "name": "UA FUTR X 4 BASKETBALL SHOES",
+    "brand": "Under Armour",
+    "price": 8099,
+    "discountPrice": 13499,
+    "discountPercent": 40,
+    "ratingValue": 4.9,
+    "ratingCount": 1107,
+    "isHot": true,
+    "colors": [
+      "BLACK"
+    ],
+    "category": "running",
+    "imageUrl": "/images/ua-2.jpg"
+  },
+  {
+    "id": 6,
+    "name": "JORDAN ZION 3 PF BASKETBALL SHOES",
+    "brand": "Jordan",
+    "price": 8957,
+    "discountPrice": 12795,
+    "discountPercent": 30,
+    "ratingValue": 5.0,
+    "ratingCount": 591,
+    "isHot": true,
+    "colors": [
+      "LIGHT BLUE"
+    ],
+    "category": "running",
+    "imageUrl": "/images/j-1.jpg"
+  },
+  {
+    "id": 7,
+    "name": "PUMA COURT PRO BASKETBALL SHOES ",
+    "brand": "Puma",
+    "price": 5599,
+    "discountPrice": 7999,
+    "discountPercent": 30,
+    "ratingValue": 4.2,
+    "ratingCount": 880,
+    "isHot": false,
+    "colors": [
+      "RED"
+    ],
+    "category": "running",
+    "imageUrl": "/images/p-1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "UA CURRY SPLASH 24 AP BASKETBALL SHOES",
+    "brand": "Under Armour",
+    "price": 6899,
+    "discountPrice": 11499,
+    "discountPercent": 40,
+    "ratingValue": 4.5,
+    "ratingCount": 953,
+    "isHot": true,
+    "colors": [
+      "BLACK",
+      "WHITE"
+    ],
+    "category": "running",
+    "imageUrl": "/images/ua-3.jpg"
+  },
+  {
+    "id": 9,
+    "name": "UA SPAWN 6 MID BASKETBALL SHOES",
+    "brand": "Under Armour",
+    "price": 7499,
+    "discountPrice": 12499,
+    "discountPercent": 40,
+    "ratingValue": 4.9,
+    "ratingCount": 293,
+    "isHot": true,
+    "colors": [
+      "BLACK"
+    ],
+    "category": "running",
+    "imageUrl": "/images/ua-4.jpg"
+  },
+  {
+    "id": 10,
+    "name": "NIKE G.T. HUSTLE 3 BLUEPRINT EP BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 8748,
+    "discountPrice": 17495,
+    "discountPercent": 50,
+    "ratingValue": 4.6,
+    "ratingCount": 1607,
+    "isHot": true,
+    "colors": [
+      "WHITE"
+    ],
+    "category": "",
+    "imageUrl": "/images/nike-3.jpg"
+  },
+  {
+    "id": 11,
+    "name": "PUMA COURT PRO BASKETBALL SHOES",
+    "brand": "Puma",
+    "price": 5599,
+    "discountPrice": 7999,
+    "discountPercent": 30,
+    "ratingValue": 4.6,
+    "ratingCount": 1178,
+    "isHot": false,
+    "colors": [
+      "WHITE"
+    ],
+    "category": "running",
+    "imageUrl": "/images/p-2.jpg"
+  },
+  {
+    "id": 12,
+    "name": "ADIDAS DAME CERTIFIED 3 BASKETBALL SHOES",
+    "brand": "Adidas",
+    "price": 6399,
+    "discountPrice": 7999,
+    "discountPercent": 20,
+    "ratingValue": 4.8,
+    "ratingCount": 805,
+    "isHot": false,
+    "colors": [
+      "CORE BLACK",
+      "LUCID RED",
+      "GREY TWO"
+    ],
+    "category": "casual",
+    "imageUrl": "/images/adidas-2.jpg"
+  },
+  {
+    "id": 13,
+    "name": "NIKE LEBRON WITNESS 8 EP BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 6956,
+    "discountPrice": 8695,
+    "discountPercent": 20,
+    "ratingValue": 4.0,
+    "ratingCount": 534,
+    "isHot": false,
+    "colors": [
+      "NAVY BLUE/",
+      "UNIVERSITY GOLD"
+    ],
+    "category": "casual",
+    "imageUrl": "/images/nike-4.jpg"
+  },
+  {
+    "id": 14,
+    "name": "NIKE LEBRON WITNESS 8 EP BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 5217,
+    "discountPrice": 8695,
+    "discountPercent": 40,
+    "ratingValue": 4.9,
+    "ratingCount": 254,
+    "isHot": true,
+    "colors": [
+      "GREY",
+      "BLACK"
+    ],
+    "category": "running",
+    "imageUrl": "/images/nike-5.jpg"
+  },
+  {
+    "id": 15,
+    "name": "JORDAN ZION 3 PF 'GALAXY' BASKETBALL SHOES",
+    "brand": "Jordan",
+    "price": 8957,
+    "discountPrice": 12795,
+    "discountPercent": 30,
+    "ratingValue": 4.3,
+    "ratingCount": 1111,
+    "isHot": true,
+    "colors": [
+      "BLACK",
+      "PURPLE",
+      "BLUE"
+    ],
+    "category": "running",
+    "imageUrl": "/images/j-2.jpg"
+  },
+  {
+    "id": 16,
+    "name": "NIKE ZOOM LEBRON NXXT GEN AMPD EP 'EQUITY' 'MISMATCHED' BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 10457,
+    "discountPrice": 14995,
+    "discountPercent": 30,
+    "ratingValue": 3.9,
+    "ratingCount": 1994,
+    "isHot": false,
+    "colors": [
+      "BLACK",
+      "WHITE"
+    ],
+    "category": "running",
+    "imageUrl": "/images/nike-6.jpg"
+  },
+  {
+    "id": 17,
+    "name": "NIKE G.T. HUSTLE ACADEMY EP BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 5947,
+    "discountPrice": 8495,
+    "discountPercent": 30,
+    "ratingValue": 4.3,
+    "ratingCount": 1845,
+    "isHot": true,
+    "colors": [
+      "BLACK",
+      "WHITE"
+    ],
+    "category": "sports",
+    "imageUrl": "/images/nike-7.jpg"
+  },
+  {
+    "id": 18,
+    "name": "UA CURRY SPLASH 24 AP BASKETBALL SHOES",
+    "brand": "Under Armour",
+    "price": 6899,
+    "discountPrice": 11499,
+    "discountPercent": 40,
+    "ratingValue": 4.1,
+    "ratingCount": 352,
+    "isHot": true,
+    "colors": [
+      "BLUE"
+    ],
+    "category": "casual",
+    "imageUrl": "/images/ua-5.jpg"
+  },
+  {
+    "id": 19,
+    "name": "NIKE LEBRON NXXT GEN AMPD EP BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 10497,
+    "discountPrice": 14995,
+    "discountPercent": 30,
+    "ratingValue": 4.6,
+    "ratingCount": 1839,
+    "isHot": true,
+    "colors": [
+      "BLACK",
+      "ORANGE"
+    ],
+    "category": "sneakers",
+    "imageUrl": "/images/nike-8.jpg"
+  },
+  {
+    "id": 20,
+    "name": "NIKE AIR MAX IMPACT 4 BASKETBALL SHOES",
+    "brand": "Nike",
+    "price": 5097,
+    "discountPrice": 8495,
+    "discountPercent": 40,
+    "ratingValue": 4.8,
+    "ratingCount": 1061,
+    "isHot": true,
+    "colors": [
+      "DARK RAISIN",
+      "WHITE",
+      "ASTRONOMY BLUE"
+    ],
+    "category": "casual",
+    "imageUrl": "/images/nike-9.jpg"
+  },
+  {
+    "id": 21,
+    "name": "JORDAN STAY LOYAL 3 SNEAKERS",
+    "brand": "Jordan",
+    "price": 8236,
+    "discountPrice": 10295,
+    "discountPercent": 20,
+    "ratingValue": 4.2,
+    "ratingCount": 1550,
+    "isHot": false,
+    "colors": [
+      "WHITE",
+      "BLACK",
+      "GYM RED"
+    ],
+    "category": "casual",
+    "imageUrl": "/images/j-3.jpg"
+  },
+  {
+    "id": 22,
+    "name": "AIR JORDAN LEGACY 312 LOW SNEAKERS",
+    "brand": "Jordan",
+    "price": 10396,
+    "discountPrice": 12995,
+    "discountPercent": 20,
+    "ratingValue": 3.8,
+    "ratingCount": 573,
+    "isHot": false,
+    "colors": [
+      "WHITE"
+    ],
+    "category": "sneakers",
+    "imageUrl": "/images/j-4.jpg"
+  },
+  {
+    "id": 23,
+    "name": "JORDAN MAX AURA 6 SNEAKERS",
+    "brand": "Jordan",
+    "price": 8327,
+    "discountPrice": 11895,
+    "discountPercent": 30,
+    "ratingValue": 4.4,
+    "ratingCount": 888,
+    "isHot": true,
+    "colors": [
+      "BLACK"
+    ],
+    "category": "sneakers",
+    "imageUrl": "/images/j-5.jpg"
+  },
+  {
+    "id": 24,
+    "name": "ADIDAS MENS BREAK START MID SNEAKERS",
+    "brand": "Adidas",
+    "price": 4619,
+    "discountPrice": 6599,
+    "discountPercent": 30,
+    "ratingValue": 4.7,
+    "ratingCount": 939,
+    "isHot": true,
+    "colors": [
+      "WHITE",
+      "GREY"
+    ],
+    "category": "sneakers",
+    "imageUrl": "/images/adidas-3.jpg"
+  }
+]
