@@ -20,8 +20,6 @@ interface ProductsProps {
 
 const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) => {
   const [page, setPage] = useState(1);
-
-
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = [...shoes];
 

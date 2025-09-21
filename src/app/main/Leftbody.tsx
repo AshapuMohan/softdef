@@ -3,14 +3,16 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import shoes from "./shoes.json";
 
+interface FilterType {
+  categories: string[];
+  brands: string[];
+  colors: string[];
+  priceRange: number[];
+  discount: string[];
+}
+
 interface FilterProps {
-  onFiltersChange?: (filters: {
-    categories: string[];
-    brands: string[];
-    colors: string[];
-    priceRange: number[];
-    discount: string[];
-  }) => void;
+  onFiltersChange?: (filters: FilterType) => void;
 }
 
 interface FilterSectionProps {
@@ -44,13 +46,13 @@ export default function LeftBody({ onFiltersChange }: FilterProps) {
     }));
   };
 
-  const handleFilterChange = (type: string, value: string | number[]) => {
+  const handleFilterChange = (type: keyof FilterType, value: string | number[]) => {
     const newFilters = { ...selectedFilters };
     
     if (type === 'priceRange') {
       newFilters.priceRange = value as number[];
     } else {
-      const filterArray = newFilters[type as keyof typeof selectedFilters] as string[];
+      const filterArray = newFilters[type] as string[];
       if (typeof value === 'string') {
         const index = filterArray.indexOf(value);
         if (index > -1) {
