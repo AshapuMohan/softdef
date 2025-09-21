@@ -8,8 +8,8 @@ export default function Logic() {
   const [filters, setFilters] = useState({
     minPrice: 0,
     maxPrice: Math.max(...shoes.map((s) => s.price)),
-    brand: null,
-    color: null,
+    brand: null as string | null,
+    color: null as string | null,
     discount: 0,
     sortBy: "name",
     itemsPerPage: 9,
