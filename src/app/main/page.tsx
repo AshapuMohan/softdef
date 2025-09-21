@@ -15,7 +15,13 @@ export default function Main() {
   });
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
-  const handleFiltersChange = (newFilters: typeof filters) => {
+  const handleFiltersChange = (newFilters: {
+    categories: string[];
+    brands: string[];
+    colors: string[];
+    priceRange: number[];
+    discount: string[];
+  }) => {
     setFilters(newFilters);
   };
 

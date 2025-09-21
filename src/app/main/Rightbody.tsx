@@ -25,7 +25,7 @@ export default function RightBody({ filters }: RightBodyProps) {
         <div className="flex flex-col sm:flex-row items-center justify-between h-full p-4 sm:px-6 lg:px-8">
           <div className="flex-1">
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
-              Adidas Men&apos;s Own The Game 3.0
+              Adidas Men&rsquo;s Own The Game 3.0
             </h1>
             <p className="text-gray-600 mb-4 text-lg">
               Performance and design. Taken right to the edge.

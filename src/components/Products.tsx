@@ -9,41 +9,9 @@ const Products = () => {
   const [page, setPage] = useState(1);
   const limit = 9;
 
-  const [brand] = useState("");
-  const [category] = useState("");
-  const [isHot] = useState("");
 
-  const [sortBy] = useState("");
-  const [order] = useState("asc");
 
-  let filteredProducts = [...shoes];
-
-  if (brand) {
-    filteredProducts = filteredProducts.filter(
-      (product) => product.brand.toLowerCase() === brand.toLowerCase()
-    );
-  }
-
-  if (category) {
-    filteredProducts = filteredProducts.filter(
-      (product) => product.category.toLowerCase() === category.toLowerCase()
-    );
-  }
-
-  if (isHot) {
-    filteredProducts = filteredProducts.filter(
-      (product) => product.isHot === (isHot === "true")
-    );
-  }
-
-  if (sortBy) {
-    filteredProducts.sort((a, b) => {
-      if (order === "desc") {
-        return b[sortBy] - a[sortBy];
-      }
-      return a[sortBy] - b[sortBy];
-    });
-  }
+  const filteredProducts = [...shoes];
 
   const totalPages = Math.ceil(filteredProducts.length / limit);
   const start = (page - 1) * limit;
