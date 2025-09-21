@@ -27,7 +27,7 @@ export default function Logic() {
     // Brand filter
     if (filters.brand) {
       result = result.filter(
-        (s) => s.brand.toLowerCase() === filters.brand.toLowerCase()
+        (s) => s.brand.toLowerCase() === filters.brand!.toLowerCase()
       );
     }
 
@@ -35,7 +35,7 @@ export default function Logic() {
     if (filters.color) {
       result = result.filter((s) =>
         s.colors.some(
-          (c) => c.toLowerCase() === filters.color.toLowerCase()
+          (c) => c.toLowerCase() === filters.color!.toLowerCase()
         )
       );
     }
