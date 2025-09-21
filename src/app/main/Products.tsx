@@ -136,7 +136,7 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
 
         <div className="flex items-center justify-between">
           <div className="flex space-x-1">
-            {shoe.colors.slice(0, 3).map((color: string, index: number) => (
+            {shoe.colors.slice(0, 3).map((color, index) => (
               <div
                 key={index}
                 className="w-4 h-4 rounded-full border border-gray-300"

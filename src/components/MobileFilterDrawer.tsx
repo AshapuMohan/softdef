@@ -2,16 +2,18 @@
 import { X } from "lucide-react";
 import LeftBody from "@/app/main/Leftbody";
 
+interface FilterType {
+  categories: string[];
+  brands: string[];
+  colors: string[];
+  priceRange: number[];
+  discount: string[];
+}
+
 interface MobileFilterDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  onFiltersChange: (filters: {
-    categories: string[];
-    brands: string[];
-    colors: string[];
-    priceRange: number[];
-    discount: string[];
-  }) => void;
+  onFiltersChange: (filters: FilterType) => void;
 }
 
 export default function MobileFilterDrawer({ isOpen, onClose, onFiltersChange }: MobileFilterDrawerProps) {

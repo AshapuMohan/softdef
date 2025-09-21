@@ -4,14 +4,16 @@ import Products from "./Products";
 import { Grip, Menu } from "lucide-react";
 import Image from "next/image";
 
+interface FilterType {
+  categories: string[];
+  brands: string[];
+  colors: string[];
+  priceRange: number[];
+  discount: string[];
+}
+
 interface RightBodyProps {
-  filters: {
-    categories: string[];
-    brands: string[];
-    colors: string[];
-    priceRange: number[];
-    discount: string[];
-  };
+  filters: FilterType;
 }
 
 export default function RightBody({ filters }: RightBodyProps) {

@@ -13,6 +13,13 @@ interface FilterProps {
   }) => void;
 }
 
+interface FilterSectionProps {
+  title: string;
+  isExpanded: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}
+
 export default function LeftBody({ onFiltersChange }: FilterProps) {
   const [expandedSections, setExpandedSections] = useState({
     categories: true,
@@ -73,12 +80,7 @@ export default function LeftBody({ onFiltersChange }: FilterProps) {
     { name: 'Pink', value: '#FFC0CB' }
   ];
 
-  const FilterSection = ({ title, isExpanded, onToggle, children }: {
-    title: string;
-    isExpanded: boolean;
-    onToggle: () => void;
-    children: React.ReactNode;
-  }) => (
+  const FilterSection = ({ title, isExpanded, onToggle, children }: FilterSectionProps) => (
     <div className="bg-gray-50 rounded-lg mb-4">
       <div 
         className="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-100 rounded-lg"

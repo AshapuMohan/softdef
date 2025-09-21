@@ -5,8 +5,16 @@ import LeftBody from "./Leftbody";
 import RightBody from "./Rightbody";
 import MobileFilterDrawer from "@/components/MobileFilterDrawer";
 
+interface FilterType {
+  categories: string[];
+  brands: string[];
+  colors: string[];
+  priceRange: number[];
+  discount: string[];
+}
+
 export default function Main() {
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<FilterType>({
     categories: [],
     brands: [],
     colors: [],
@@ -15,13 +23,7 @@ export default function Main() {
   });
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
-  const handleFiltersChange = (newFilters: {
-    categories: string[];
-    brands: string[];
-    colors: string[];
-    priceRange: number[];
-    discount: string[];
-  }) => {
+  const handleFiltersChange = (newFilters: FilterType) => {
     setFilters(newFilters);
   };
 

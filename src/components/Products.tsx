@@ -8,9 +8,6 @@ import { Star } from "lucide-react";
 const Products = () => {
   const [page, setPage] = useState(1);
   const limit = 9;
-
-
-
   const filteredProducts = [...shoes];
 
   const totalPages = Math.ceil(filteredProducts.length / limit);
