@@ -1,8 +1,8 @@
 "use client";
 import { useState, useMemo } from "react";
 import shoes from "./shoes.json";
-import LeftBody from "./LeftBody";
-import RightBody from "./RightBody";
+import LeftBody from "./Leftbody";
+import RightBody from "./Rightbody";
 
 export default function Logic() {
   const [filters, setFilters] = useState({
