@@ -69,13 +69,35 @@ export default function Logic() {
     return result;
   }, [filters]);
 
+  const handleFiltersChange = (newFilters: {
+    categories: string[];
+    brands: string[];
+    colors: string[];
+    priceRange: number[];
+    discount: string[];
+  }) => {
+    // Convert new filter format to old format
+    setFilters(prev => ({
+      ...prev,
+      brand: newFilters.brands.length > 0 ? newFilters.brands[0] : null,
+      color: newFilters.colors.length > 0 ? newFilters.colors[0] : null,
+      minPrice: newFilters.priceRange[0],
+      maxPrice: newFilters.priceRange[1],
+      discount: newFilters.discount.length > 0 ? parseInt(newFilters.discount[0]) : 0
+    }));
+  };
+
   return (
     <div className="flex">
-      <LeftBody filters={filters} setFilters={setFilters} />
+      <LeftBody onFiltersChange={handleFiltersChange} />
       <RightBody
-        filters={filters}
-        setFilters={setFilters}
-        products={filteredShoes}
+        filters={{
+          categories: filters.brand ? [filters.brand] : [],
+          brands: filters.brand ? [filters.brand] : [],
+          colors: filters.color ? [filters.color] : [],
+          priceRange: [filters.minPrice, filters.maxPrice],
+          discount: filters.discount > 0 ? [`${filters.discount}% or more`] : []
+        }}
       />
     </div>
   );
