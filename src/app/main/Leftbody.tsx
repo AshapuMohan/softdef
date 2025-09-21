@@ -4,7 +4,13 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import shoes from "./shoes.json";
 
 interface FilterProps {
-  onFiltersChange?: (filters: any) => void;
+  onFiltersChange?: (filters: {
+    categories: string[];
+    brands: string[];
+    colors: string[];
+    priceRange: number[];
+    discount: string[];
+  }) => void;
 }
 
 export default function LeftBody({ onFiltersChange }: FilterProps) {
@@ -67,7 +73,12 @@ export default function LeftBody({ onFiltersChange }: FilterProps) {
     { name: 'Pink', value: '#FFC0CB' }
   ];
 
-  const FilterSection = ({ title, items, type, isExpanded, onToggle, children }: any) => (
+  const FilterSection = ({ title, isExpanded, onToggle, children }: {
+    title: string;
+    isExpanded: boolean;
+    onToggle: () => void;
+    children: React.ReactNode;
+  }) => (
     <div className="bg-gray-50 rounded-lg mb-4">
       <div 
         className="flex justify-between items-center p-4 cursor-pointer hover:bg-gray-100 rounded-lg"
@@ -85,7 +96,7 @@ export default function LeftBody({ onFiltersChange }: FilterProps) {
   );
 
   return (
-    <div className="w-80 bg-white p-4 border-r border-gray-200 h-full overflow-y-auto">
+    <div className="w-full lg:w-80 bg-white p-3 sm:p-4 border-r border-gray-200 h-full overflow-y-auto">
       <h2 className="text-xl font-bold mb-6 text-gray-800">Filters</h2>
 
       <FilterSection
@@ -209,6 +220,7 @@ export default function LeftBody({ onFiltersChange }: FilterProps) {
           setSelectedFilters(resetFilters);
           onFiltersChange?.(resetFilters);
         }}
+        suppressHydrationWarning
       >
         Clear All Filters
       </button>

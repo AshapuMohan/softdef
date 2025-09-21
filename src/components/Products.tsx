@@ -9,12 +9,12 @@ const Products = () => {
   const [page, setPage] = useState(1);
   const limit = 9;
 
-  const [brand, setBrand] = useState("");
-  const [category, setCategory] = useState("");
-  const [isHot, setIsHot] = useState("");
+  const [brand] = useState("");
+  const [category] = useState("");
+  const [isHot] = useState("");
 
-  const [sortBy, setSortBy] = useState("");
-  const [order, setOrder] = useState("asc");
+  const [sortBy] = useState("");
+  const [order] = useState("asc");
 
   let filteredProducts = [...shoes];
 

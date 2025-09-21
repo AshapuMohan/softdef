@@ -15,35 +15,31 @@ export default function Main() {
   });
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
-  const handleFiltersChange = (newFilters: any) => {
+  const handleFiltersChange = (newFilters: typeof filters) => {
     setFilters(newFilters);
   };
 
   return (
     <div className="w-full bg-gray-50">
-      {/* Mobile Filter Button */}
-      <div className="lg:hidden p-4 border-b bg-white">
+      <div className="lg:hidden p-3 sm:p-4 border-b bg-white">
         <button
           onClick={() => setIsMobileFilterOpen(true)}
-          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center space-x-2 px-3 sm:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+          suppressHydrationWarning
         >
           <Filter size={16} />
           <span>Filters</span>
         </button>
       </div>
 
-      {/* Main Content */}
       <div className="flex min-h-screen">
-        {/* Desktop Sidebar */}
         <div className="hidden lg:block">
           <LeftBody onFiltersChange={handleFiltersChange} />
         </div>
         
-        {/* Main Content Area */}
         <RightBody filters={filters} />
       </div>
 
-      {/* Mobile Filter Drawer */}
       <MobileFilterDrawer
         isOpen={isMobileFilterOpen}
         onClose={() => setIsMobileFilterOpen(false)}

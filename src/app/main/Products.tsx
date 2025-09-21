@@ -20,7 +20,7 @@ interface ProductsProps {
 
 const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) => {
   const [page, setPage] = useState(1);
-  const [selectedColor, setSelectedColor] = useState<string>("");
+
 
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = [...shoes];
@@ -83,13 +83,11 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
   const start = (page - 1) * itemsPerPage;
   const paginatedProducts = filteredAndSortedProducts.slice(start, start + itemsPerPage);
 
-  const ProductCard = ({ shoe }: { shoe: any }) => {
-    const cardBgColor = selectedColor && shoe.colors.some((color: string) => 
-      color.toLowerCase().includes(selectedColor.toLowerCase())
-    ) ? 'bg-blue-50' : 'bg-white';
+  const ProductCard = ({ shoe }: { shoe: typeof shoes[0] }) => {
+    const cardBgColor = 'bg-white';
 
     return (
-      <div className={`${cardBgColor} border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-all duration-300 group relative`}>
+      <div className={`${cardBgColor} border border-gray-200 rounded-lg p-3 sm:p-4 hover:shadow-lg transition-all duration-300 group relative`}>
         {shoe.isHot && (
           <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium z-10">
             HOT
@@ -102,16 +100,16 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
             alt={shoe.name}
             width={300}
             height={200}
-            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-32 sm:h-40 lg:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button className="bg-white p-2 rounded-full shadow-md hover:bg-gray-50 mb-2">
+            <button className="bg-white p-2 rounded-full shadow-md hover:bg-gray-50 mb-2" suppressHydrationWarning>
               <Heart size={16} className="text-gray-600" />
             </button>
           </div>
         </div>
 
-        <h3 className="text-sm font-semibold mb-2 text-gray-800 line-clamp-2">
+        <h3 className="text-xs sm:text-sm font-semibold mb-2 text-gray-800 line-clamp-2">
           {shoe.name}
         </h3>
         
@@ -150,7 +148,7 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
               <span className="text-xs text-gray-500">+{shoe.colors.length - 3}</span>
             )}
           </div>
-          <button className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700 transition-colors flex items-center space-x-1">
+          <button className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm hover:bg-blue-700 transition-colors flex items-center space-x-1" suppressHydrationWarning>
             <ShoppingCart size={14} />
             <span>Add</span>
           </button>
@@ -198,9 +196,9 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
 
   return (
     <div>
-      <div className={`grid gap-6 ${
+      <div className={`grid gap-3 sm:gap-4 lg:gap-6 ${
         viewMode === 'grid' 
-          ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+          ? 'grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4'
           : 'grid-cols-1'
       }`}>
         {paginatedProducts.map((shoe) => (
@@ -214,6 +212,7 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
             onClick={() => setPage(Math.max(1, page - 1))}
             disabled={page === 1}
             className="px-3 py-2 rounded-md border border-gray-300 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            suppressHydrationWarning
           >
             Previous
           </button>
@@ -229,6 +228,7 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
                     ? 'bg-blue-600 text-white'
                     : 'border border-gray-300 text-gray-700 bg-white hover:bg-gray-50'
                 }`}
+                suppressHydrationWarning
               >
                 {pageNum}
               </button>
@@ -239,6 +239,7 @@ const Products = ({ filters, sortBy, itemsPerPage, viewMode }: ProductsProps) =>
             onClick={() => setPage(Math.min(totalPages, page + 1))}
             disabled={page === totalPages}
             className="px-3 py-2 rounded-md border border-gray-300 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            suppressHydrationWarning
           >
             Next
           </button>

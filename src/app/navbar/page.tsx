@@ -1,33 +1,84 @@
+"use client";
 import Link from "next/link";
-import React from "react"
-import { ShoppingCart,ShoppingBag } from "lucide-react";
+import React, { useState } from "react";
+import { ShoppingCart, ShoppingBag, Menu, X } from "lucide-react";
+
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="w-full h-[45px] bg-gray-50 flex justify-around items-center px-4 py-8">
-        <div className="flex flex-2/6 items-center gap-2">
-            {/* <div className="w-[51px] h-[44px] rounded-[16px] bg-[#40BFFF] flex items-center justify-center">
-                <div style={{width: "19.56px", height: "22.67px", top: "12.22px", left: "14.17px", transform: "rotate(-90 deg)"}}>
-                    <div style={{width: "19.56px", height: "22.67px", top: "12.22px", left: "14.17px", transform: "rotate(-90 deg)"}}>
-                        <div className="bg-[#FFFFFF]" style={{width: "19.56px",height: "22.67px",top: "12.22px",left: "14.17px",transform: "rotate(-90 deg)"}}></div>
-                    </div>
-                </div>
-            </div> */}
-            <ShoppingBag size={30} color="#40BFFF"/>
-            <h1 className="font-bold text-[24px] font-poppins text-[#22262A]">E-comm</h1>
+    <nav className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="flex justify-between items-center h-12 sm:h-14 lg:h-16">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+              <ShoppingBag size={20} className="sm:w-6 sm:h-6 text-white" />
+            </div>
+            <span className="text-lg sm:text-xl font-bold text-gray-900">E-comm</span>
+          </div>
+
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
+            <Link href="/" className="text-blue-600 font-medium hover:text-blue-700 transition-colors text-sm lg:text-base">
+              HOME
+            </Link>
+            <Link href="/bags" className="text-gray-700 hover:text-gray-900 transition-colors text-sm lg:text-base">
+              BAGS
+            </Link>
+            <Link href="/sneakers" className="text-gray-700 hover:text-gray-900 transition-colors text-sm lg:text-base">
+              SNEAKERS
+            </Link>
+            <Link href="/belt" className="text-gray-700 hover:text-gray-900 transition-colors text-sm lg:text-base">
+              BELT
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors text-sm lg:text-base">
+              CONTACT
+            </Link>
+          </div>
+
+          <div className="flex items-center space-x-2 sm:space-x-4">
+            <button className="flex items-center space-x-1 sm:space-x-2 bg-gray-50 hover:bg-gray-100 px-2 sm:px-3 py-1 sm:py-2 rounded-lg transition-colors" suppressHydrationWarning>
+              <ShoppingCart size={16} className="sm:w-5 sm:h-5 text-gray-700" />
+              <div className="hidden sm:flex flex-col items-start">
+                <span className="text-xs text-gray-500">Cart</span>
+                <span className="text-sm font-medium text-gray-900">$0.00</span>
+              </div>
+              <span className="bg-blue-500 text-white text-xs rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center">
+                0
+              </span>
+            </button>
+
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+              suppressHydrationWarning
+            >
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
-        <div className="flex flex-3/6 justify-between items-center gap-30 text-bold font-poppins text-[#22262A]">
-            <Link href="/home" className="text-blue-500 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700">HOME</Link>
-            <Link href="/bag">BAG</Link>
-            <Link href="/sneakers">SNEAKERS</Link>
-            <Link href="/belt">BELT</Link>
-            <Link href="/home">MAIN</Link>
-            <Link href="/contact">CONTACT</Link>
-        </div>
-        <div className="flex flex-1/6 pl-10 items-center gap-3">
-            <ShoppingCart size={20} color="#22262A"/>
-            <h1 className="font-poppins text-[16px] text-[#22262A]">Items</h1>
-            <h1 className="text-gray-500">$0.00</h1>
-        </div>
-    </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-gray-200 py-4">
+            <div className="flex flex-col space-y-2">
+              <Link href="/" className="text-blue-600 font-medium py-2 text-sm">
+                HOME
+              </Link>
+              <Link href="/bags" className="text-gray-700 py-2 text-sm">
+                BAGS
+              </Link>
+              <Link href="/sneakers" className="text-gray-700 py-2 text-sm">
+                SNEAKERS
+              </Link>
+              <Link href="/belt" className="text-gray-700 py-2 text-sm">
+                BELT
+              </Link>
+              <Link href="/contact" className="text-gray-700 py-2 text-sm">
+                CONTACT
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 }

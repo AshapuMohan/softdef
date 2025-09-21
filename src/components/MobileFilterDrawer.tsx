@@ -5,7 +5,13 @@ import LeftBody from "@/app/main/Leftbody";
 interface MobileFilterDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  onFiltersChange: (filters: any) => void;
+  onFiltersChange: (filters: {
+    categories: string[];
+    brands: string[];
+    colors: string[];
+    priceRange: number[];
+    discount: string[];
+  }) => void;
 }
 
 export default function MobileFilterDrawer({ isOpen, onClose, onFiltersChange }: MobileFilterDrawerProps) {
@@ -20,9 +26,9 @@ export default function MobileFilterDrawer({ isOpen, onClose, onFiltersChange }:
       />
       
       {/* Drawer */}
-      <div className="fixed inset-y-0 left-0 w-80 bg-white shadow-xl transform transition-transform">
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold">Filters</h2>
+      <div className="fixed inset-y-0 left-0 w-full max-w-xs sm:max-w-sm bg-white shadow-xl transform transition-transform">
+        <div className="flex items-center justify-between p-3 sm:p-4 border-b">
+          <h2 className="text-base sm:text-lg font-semibold">Filters</h2>
           <button
             onClick={onClose}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
