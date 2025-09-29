@@ -1,6 +1,6 @@
 // "use client"
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import shoes from "../app/main/shoes.json";
 import Image from "next/image";
 import { Star } from "lucide-react";
